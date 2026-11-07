@@ -54,7 +54,6 @@ public class TimeManagement : MonoBehaviour
             }
 
             on_time_progressed?.Invoke();
-            Debug.Log("time test");
 
             yield return new WaitForSeconds(timeJump * timeScale);
 

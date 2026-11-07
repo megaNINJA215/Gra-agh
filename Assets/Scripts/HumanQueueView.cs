@@ -17,7 +17,11 @@ public class HumanQueueView : MonoBehaviour {
     }
 
     public void SpawnRandomHuman() {
-        Debug.Log("Próba zrespienia");
+        if (humanQueue.humans.Count >= 8) {
+            Debug.Log("Osiągniętą maksymalną długość kolejki");
+            return;
+        }
+
         humanQueue.SpawnRandomHuman(spawnPosition.position);
         UpdateQueue();
     }

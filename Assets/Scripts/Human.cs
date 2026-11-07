@@ -24,8 +24,6 @@ public class Human : MonoBehaviour
         float duration = Vector2.Distance(transform.position, targetPosition) / humanData.movement_speed;
 
         while (duration > 0f) {
-            Debug.Log("Duration" + duration);
-
             duration = Vector2.Distance(transform.position, targetPosition) / humanData.movement_speed;
 
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, humanData.movement_speed * Time.deltaTime);
