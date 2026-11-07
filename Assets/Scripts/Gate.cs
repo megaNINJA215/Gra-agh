@@ -6,7 +6,7 @@ public class Gate : MonoBehaviour {
     private bool usedToday = false;
 
     public void EnterGate() {
-        if (!GameManager.isDayRunning)
+        if (!GameData.isDayRunning)
             return;
 
         if (usedToday) {

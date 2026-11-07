@@ -19,7 +19,7 @@ public class AudioManager : MonoBehaviour
 
     [Header("Instace")]
 
-    [SerializeField] private AudioSource created_position_source;
+    [SerializeField] private AudioSource created_position_source; // NIE UŻYWAĆ DOPÓKI NIE DOSTARCZĘ POTRZEBNEGO OBIEKTU
 
     private int last_used_main_source;
     private int last_used_position_source;

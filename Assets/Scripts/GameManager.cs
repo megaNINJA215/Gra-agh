@@ -5,13 +5,11 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public static bool isDayRunning;
+    // public static bool isDayRunning;
+    [SerializeField] public GameData gameData;
 
     [Header("Human Queue")]
     [SerializeField] private HumanQueueView humanQueueView;
-
-    [Header("Player Stats")]
-    public int Money = 5000;
 
     [Header("Game Components")]
     [SerializeField] private TextMeshProUGUI hajs;
@@ -21,14 +19,15 @@ public class GameManager : MonoBehaviour
     void Awake(){
         if(Instance == null){
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
     void Start() {
         TimeManagement.Instance.StartTimeCounter();
 
-        hajs.SetText("Hajs: " + Money);
-        isDayRunning = true;
+        hajs.SetText("Hajs: " + gameData.money);
+        gameData.isDayRunning = true;
     }
 
     void ShowEndDayScreen() {
@@ -46,13 +45,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void Buy(int value) {
-        Money -= value;
-        hajs.SetText("Hajs: " + Money);
+        gameData.money -= value;
+        hajs.SetText("Hajs: " + gameData.money);
     }
 
     public void AddMoney(int value) {
-        Money += value;
-        hajs.SetText("Hajs: " + Money);
+        gameData.money += value;
+        hajs.SetText("Hajs: " + gameData.money);
     }
 
     private void UpdateHourCounter() {

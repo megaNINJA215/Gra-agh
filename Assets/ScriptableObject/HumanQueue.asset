@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0f25c7bb6ba814eb2b7360211b86e7, type: 3}
   m_Name: HumanQueue
   m_EditorClassIdentifier: Assembly-CSharp::HumanQueue
+  knight: {fileID: -5711848221618334454, guid: 33d0cd098ad976c129792f28f914a99e, type: 3}
+  child: {fileID: 4923944217956077088, guid: 9314af2553d1edc74b2ae1b66957fa01, type: 3}
+  peasant: {fileID: 7742358082320047022, guid: a0c7f59945835f9bfb66dafac2c50049, type: 3}
+  trader: {fileID: 3121122509072238274, guid: a8dddd6fd9c6af6e3a474a2276da3d4b, type: 3}
   human_prefab: {fileID: 928231279082377526, guid: d5936d8acf773ce4684eb655be35efe0, type: 3}
+  human_prefab_big: {fileID: 928231279082377526, guid: 94eb7abcfee7bff5f87d285a87c03bac, type: 3}

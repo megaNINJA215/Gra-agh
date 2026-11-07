@@ -10,7 +10,7 @@ public class Tent : MonoBehaviour //, Interactable
     }
 
     public void UpgradeTent() {
-        if (!GameManager.isDayRunning)
+        if (!GameData.isDayRunning)
             return;
 
         if (tentData._nextLevel == null) {
@@ -18,7 +18,7 @@ public class Tent : MonoBehaviour //, Interactable
             return;
         }
 
-        if (!tentData.CanPurchase(GameManager.Instance.Money)) {
+        if (!tentData.CanPurchase(GameData.money)) {
             Debug.Log("Nie stać cię");
             return;
         }

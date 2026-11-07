@@ -8,7 +8,7 @@ public class HumanData : ScriptableObject {
     public int _minSurvivalDays;
     public int _maxSurvivalDays;
     public float _survivalProbability; // 0.0f - 1.0f
-    public Color _color;
+    public Sprite _sprite;
 
     [Space]
 

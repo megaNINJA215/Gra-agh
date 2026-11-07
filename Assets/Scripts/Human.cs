@@ -5,7 +5,7 @@ using TMPro;
 public class Human : MonoBehaviour
 {
     private HumanData humanData;
-    private SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
     private Coroutine movementCoroutine;
     private Vector3 currentTarget;
 
@@ -15,7 +15,7 @@ public class Human : MonoBehaviour
 
     public void Initialize(HumanData data) {
         humanData = data;
-        spriteRenderer.color = data._color; //TODO: zastąpić faktycznymi teksturami
+        spriteRenderer.sprite = data._sprite; //TODO: zastąpić faktycznymi teksturami
 
         // Debug.Log($"Spawned: {JsonUtility.ToJson(humanData, true)}");
     }

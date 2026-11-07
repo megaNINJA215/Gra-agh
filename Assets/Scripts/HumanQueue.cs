@@ -4,9 +4,27 @@ using System.Collections.Generic;
 [CreateAssetMenu(fileName = "HumanQueue", menuName = "GameData/Human Queue")]
 public class HumanQueue : ScriptableObject {
 
+  public Sprite knight;
+  public Sprite child;
+  public Sprite peasant;
+  public Sprite trader;
+
+    public class DataAndObject
+    {
+        public HumanData _data;
+        public Human _gameobject;
+        public DataAndObject(HumanData humanData, Human spawnedHuman)
+        {
+            this._data = humanData;
+            this._gameobject = spawnedHuman;
+        }
+    }
+
+
     [SerializeField] private Human human_prefab;
-    public Queue<Human> humans = new Queue<Human>();
-    public IEnumerable<Human> Humans => humans;
+    [SerializeField] private Human human_prefab_big;
+    public Queue<DataAndObject> humans = new();
+    public IEnumerable<DataAndObject> Humans => humans;
 
     public void SpawnRandomHuman(Vector2 position) {
         Human spawnedHuman = Instantiate(
@@ -30,44 +48,63 @@ public class HumanQueue : ScriptableObject {
         humanData._maxSurvivalDays = Random.Range(humanData._minSurvivalDays + 1, 15);
         humanData._survivalProbability = Random.Range(0.0f, 1.0f);
 
-        humanData._color = Color.red;
         switch (humanData._profession) {
             case Profession.Knight:
-                humanData._color = Color.gray;
+                humanData._sprite = knight;
                 break;
             case Profession.Peasant:
-                humanData._color = Color.green;
+                humanData._sprite = peasant;
                 break;
             case Profession.Trader:
-                humanData._color = Color.orange;
+                humanData._sprite = trader;
                 break;
             case Profession.Child:
-                humanData._color = Color.cyan;
+                humanData._sprite = child;
                 break;
         }
 
         spawnedHuman.name = humanData._name;
 
         spawnedHuman.Initialize(humanData);
-        humans.Enqueue(spawnedHuman);
+        humans.Enqueue(new(humanData, spawnedHuman));
     }
 
     public bool RemoveFirstHuman() {
         while (humans.Count > 0) {
-            Human firstHuman = humans.Dequeue();
+            DataAndObject firstHuman = humans.Dequeue();
             if (firstHuman == null)
                 continue;
 
-            Destroy(firstHuman.gameObject);
+            Destroy(firstHuman._gameobject.gameObject);
             return true;
         }
         return false;
+    }
+
+    private Human GenerateObjectFromData(HumanData data, Transform firstHumanPosition, Transform spacing, bool isBig, int index) {
+        Human spawnedHuman = Instantiate(
+            isBig ? human_prefab_big : human_prefab,
+            firstHumanPosition.position + spacing.position * index,
+            Quaternion.identity
+        );
+
+        spawnedHuman.name = data._name;
+        spawnedHuman.Initialize(data);
+
+        return spawnedHuman;
+    }
+
+    public void StartNewScene(Transform firstHumanPosition, Transform spacing, bool isBig) {
+        int index = 0;
+        foreach (DataAndObject human in humans) {
+            human._gameobject = GenerateObjectFromData(human._data, firstHumanPosition, spacing, isBig, index);
+            index++;
+        }
     }
 }
 
 public static class WeightedRandom {
     public static int GetRandom(float[] chances) {
-
         float random = Random.Range(0f, 1f);
         
         for (int i = 0; i < chances.Length; i++) {

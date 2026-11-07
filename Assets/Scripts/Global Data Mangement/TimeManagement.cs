@@ -47,6 +47,7 @@ public class TimeManagement : MonoBehaviour
 
     public IEnumerator TimePassage() {
         while (time < 60 * availableHours) {
+            Debug.Log("time");
             foreach (RandomizedAction action in randomized_actions) {
                 if (time % action.chosen_randomized_duration == 0) {
                     action.randomizedEvent?.Invoke();

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edac95396af86e4ebfc4c21dec880dd, type: 3}
+  m_Name: Testing Sound
+  m_EditorClassIdentifier: Assembly-CSharp::AudioData_SO
+  vol_multiplier: 1
+  pitch_multiplier: 0
+  force_2d: 0
+  settings:
+    use_3d: 1
+    min_distance: 7.05
+    max_distance: 20
+    important_sound: 0
+    loop: 0
+    bypass_filters: 0
+    prevent_repeating: 0
+    rolloff_type: 1
+  sound_effects: []
+  previous_clip: {fileID: 0}
+  used_mixer: {fileID: -5152884978151141338, guid: b3556842657247fec99a1e8a672f9e10, type: 2}
