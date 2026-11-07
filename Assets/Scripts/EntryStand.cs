@@ -8,7 +8,7 @@ public class EntryStand : MonoBehaviour
     [SerializeField] private Collider2D my_collider;
 
     public void EnterEntryStand() {
-        if (GameManager.Instance.isDayRunning && !humanQueue.RemoveFirstHuman())
+        if (GameManager.isDayRunning && !humanQueue.RemoveFirstHuman())
             Debug.Log("Nikogo nie ma w kolejce");
 
         UnityEngine.SceneManagement.SceneManager.LoadScene("EntryStand");

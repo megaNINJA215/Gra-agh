@@ -10,7 +10,7 @@ public class Tent : MonoBehaviour //, Interactable
     }
 
     public void UpgradeTent() {
-        if (!GameManager.Instance.isDayRunning)
+        if (!GameManager.isDayRunning)
             return;
 
         if (tentData._nextLevel == null) {
