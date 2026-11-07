@@ -11,13 +11,8 @@ public class StartNextDay : MonoBehaviour
     }
 
     public void StartNextDayFn() {
-        if (GameManager.Instance.countTimeCoroutine != null) {
-            GameManager.Instance.StopCoroutine(GameManager.Instance.countTimeCoroutine);
-            GameManager.Instance.countTimeCoroutine = null;
-        }
         endOfDayUI.SetActive(false);
-        Time.timeScale = 1f;
         gate.StartDay();
-        GameManager.Instance.StartTimeCounter();
+        TimeManagement.Instance.StartTimeCounter();
     }
 }
