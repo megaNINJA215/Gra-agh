@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Godzina\nDzie\u0144"
+  m_text: "Dzie\u0144\nGodzina"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2270,9 +2270,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   isDayRunning: 0
+  humanQueue: {fileID: 11400000, guid: 8c541f1b493698844af50a57f861e952, type: 2}
   Money: 5000
   time: 0
-  avaibleHours: 1
+  avaibleHours: 8
   startHour: 12
   startMinute: 0
   timeScale: 0.1
@@ -2663,6 +2664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cabfda249e41ace48946f574b4ad95c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EntryStand
+  humanQueue: {fileID: 11400000, guid: 8c541f1b493698844af50a57f861e952, type: 2}
 --- !u!114 &2100453641
 MonoBehaviour:
   m_ObjectHideFlags: 0

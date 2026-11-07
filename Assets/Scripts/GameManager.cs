@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public bool isDayRunning;
+    [SerializeField] private HumanQueue humanQueue;
 
 
     [Header("Player Stats")]
@@ -61,6 +62,10 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator CountTime() {
         while (time < 60 * avaibleHours) {
+            if (time % 30 == 0) {
+                humanQueue.SpawnRandomHuman(); //TODO: umieścić to w sensownym miejscu, teraz dałem tutaj dla testu, respi się co 30 minut in game, można to również zrandomizować
+            }
+
             godzina.SetText(TimeFormatter.Format(dayNumber, startHour, startMinute, time));
             yield return new WaitForSeconds(timeJump * timeScale);
             time += timeJump;

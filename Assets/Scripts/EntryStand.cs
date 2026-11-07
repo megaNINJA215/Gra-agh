@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class EntryStand : MonoBehaviour
 {
+    [SerializeField] private HumanQueue humanQueue;
 
     public void OnMouseOver() {
         if (Mouse.current == null)
@@ -14,6 +15,8 @@ public class EntryStand : MonoBehaviour
     }
 
     public void EnterEntryStand() {
-        Debug.Log("zmiana sceny");
+        if (!humanQueue.RemoveFirstHuman()) {
+            Debug.Log("Nikogo nie ma w kolejce");
+        }
     }
 }
