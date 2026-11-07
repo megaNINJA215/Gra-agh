@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: ad81b1a40bd417b969455f55bb4d9d89
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8860469954133912511
+    second: tent_free_spot_0
+  - first:
+      213: 2388178835147656640
+    second: tent_free_spot_1
+  - first:
+      213: -6686911032621803291
+    second: tent_free_spot_2
+  - first:
+      213: 8507502257407381252
+    second: tent_free_spot_3
+  - first:
+      213: 6880851751617761901
+    second: tent_free_spot_4
+  - first:
+      213: 7843638090723260640
+    second: tent_free_spot_5
+  - first:
+      213: -7728197948286088368
+    second: tent_free_spot_6
+  - first:
+      213: -2431604852701546084
+    second: tent_free_spot_7
+  - first:
+      213: 6902455852382422925
+    second: tent_free_spot_8
+  - first:
+      213: -516901651852550737
+    second: tent_free_spot_9
+  - first:
+      213: 2948520189258099549
+    second: tent_free_spot_10
+  - first:
+      213: 5779181298195404578
+    second: tent_free_spot_11
+  - first:
+      213: -4562534840372153547
+    second: tent_free_spot_12
+  - first:
+      213: 3474315255362922521
+    second: tent_free_spot_13
+  - first:
+      213: 1776948210029334426
+    second: tent_free_spot_14
+  - first:
+      213: 8641428043418735641
+    second: tent_free_spot_15
+  - first:
+      213: 8290745780426115706
+    second: tent_free_spot_16
+  - first:
+      213: 5257369821105850831
+    second: tent_free_spot_17
+  - first:
+      213: 3762110895039651512
+    second: tent_free_spot_18
+  - first:
+      213: 4704290850092118330
+    second: tent_free_spot_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 58, y: 56, z: 58, w: 56}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tent_free_spot_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 205
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbb6c2f7a76b6fa70800000000000000
+      internalID: 8860469954133912511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 239
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd05195ff3842120800000000000000
+      internalID: 2388178835147656640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_2
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 241
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8dfe738d15333a0800000000000000
+      internalID: -6686911032621803291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_3
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 240
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40fc99a7a38b01670800000000000000
+      internalID: 8507502257407381252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_4
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 238
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d621d473632bd7f50800000000000000
+      internalID: 6880851751617761901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_5
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 205
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8784049433adc60800000000000000
+      internalID: 7843638090723260640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 174
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b418a69ecefb490800000000000000
+      internalID: -7728197948286088368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_7
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 172
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c99bb980544314ed0800000000000000
+      internalID: -2431604852701546084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 141
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d870217e6037acf50800000000000000
+      internalID: 6902455852382422925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_9
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 134
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad1481bfa893d8f0800000000000000
+      internalID: -516901651852550737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 101
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5bebcd7d7f3be820800000000000000
+      internalID: 2948520189258099549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 97
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 227948375c6c33050800000000000000
+      internalID: 5779181298195404578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_12
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 63
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533364c6cbe9ea0c0800000000000000
+      internalID: -4562534840372153547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_13
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 64
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918a0a9215f373030800000000000000
+      internalID: 3474315255362922521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 6
+        width: 43
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9f801b7bfcf8a810800000000000000
+      internalID: 1776948210029334426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 9
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914921075058ce770800000000000000
+      internalID: 8641428043418735641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 7
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a0e5d6c55ae0370800000000000000
+      internalID: 8290745780426115706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_17
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 6
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc98fdf5ffde5f840800000000000000
+      internalID: 5257369821105850831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_18
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 8
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be17703de3b53430800000000000000
+      internalID: 3762110895039651512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tent_free_spot_19
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 8
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a317cdf8a9ff84140800000000000000
+      internalID: 4704290850092118330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 1537655665
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tent_free_spot_0: 8860469954133912511
+      tent_free_spot_1: 2388178835147656640
+      tent_free_spot_10: 2948520189258099549
+      tent_free_spot_11: 5779181298195404578
+      tent_free_spot_12: -4562534840372153547
+      tent_free_spot_13: 3474315255362922521
+      tent_free_spot_14: 1776948210029334426
+      tent_free_spot_15: 8641428043418735641
+      tent_free_spot_16: 8290745780426115706
+      tent_free_spot_17: 5257369821105850831
+      tent_free_spot_18: 3762110895039651512
+      tent_free_spot_19: 4704290850092118330
+      tent_free_spot_2: -6686911032621803291
+      tent_free_spot_3: 8507502257407381252
+      tent_free_spot_4: 6880851751617761901
+      tent_free_spot_5: 7843638090723260640
+      tent_free_spot_6: -7728197948286088368
+      tent_free_spot_7: -2431604852701546084
+      tent_free_spot_8: 6902455852382422925
+      tent_free_spot_9: -516901651852550737
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
