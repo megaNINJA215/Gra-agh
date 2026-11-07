@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Tent : MonoBehaviour //, Interactable
 {
@@ -10,16 +9,9 @@ public class Tent : MonoBehaviour //, Interactable
         spriteRenderer.sprite = tentData._sprite;
     }
 
-    public void OnMouseOver() {
-        if (Mouse.current == null)
-            return;
-
-        if (Mouse.current.leftButton.wasPressedThisFrame && GameManager.Instance.isDayRunning) {
-            UpgradeTent();
-        }
-    }
-
     public void UpgradeTent() {
+        if (!GameManager.Instance.isDayRunning)
+            return;
 
         if (tentData._nextLevel == null) {
             Debug.Log("już jest maksymalny poziom");

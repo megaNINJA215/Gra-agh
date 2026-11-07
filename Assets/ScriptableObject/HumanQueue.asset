@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0f25c7bb6ba814eb2b7360211b86e7, type: 3}
   m_Name: HumanQueue
   m_EditorClassIdentifier: Assembly-CSharp::HumanQueue
-  humanPrefab: {fileID: 1009786680863944051, guid: d5936d8acf773ce4684eb655be35efe0, type: 3}
+  human_prefab: {fileID: 928231279082377526, guid: d5936d8acf773ce4684eb655be35efe0, type: 3}

@@ -1,21 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class EntryStand : MonoBehaviour
 {
     [SerializeField] private HumanQueue humanQueue;
-
-    public void OnMouseOver() {
-        if (Mouse.current == null)
-            return;
-
-        if (Mouse.current.leftButton.wasPressedThisFrame && GameManager.Instance.isDayRunning) {
-            EnterEntryStand();
-        }
-    }
+    [SerializeField] private Collider2D my_collider;
 
     public void EnterEntryStand() {
-        if (!humanQueue.RemoveFirstHuman()) {
+        if (GameManager.Instance.isDayRunning && !humanQueue.RemoveFirstHuman()) {
             Debug.Log("Nikogo nie ma w kolejce");
         }
     }

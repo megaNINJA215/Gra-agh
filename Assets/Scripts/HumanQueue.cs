@@ -3,24 +3,21 @@ using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "HumanQueue", menuName = "GameData/Human Queue")]
 public class HumanQueue : ScriptableObject {
-    [SerializeField] private GameObject humanPrefab;
+    [SerializeField] private Human human_prefab;
     private Queue<Human> humans = new Queue<Human>();
-    private Vector3 spawnPosition = new Vector3(-10f, -1f, 0f);
 
-    public void SpawnRandomHuman()
+    public void SpawnRandomHuman(Vector2 position)
     {
-        GameObject spawnedHuman = Instantiate(
-            humanPrefab,
-            spawnPosition,
+        Human spawnedHuman = Instantiate(
+            human_prefab,
+            position,
             Quaternion.identity
         );
 
         HumanData humanData = CreateInstance<HumanData>();
 
-
         float[] professionChances = { 0.5f, 0.3f, 0.15f, 0.05f }; 
         float[] lootQualityChances = { 0.5f, 0.3f, 0.13f, 0.06f, 0.01f };
-
         
         humanData._name = "Human " + Random.Range(1, 100);
 
@@ -29,7 +26,7 @@ public class HumanQueue : ScriptableObject {
 
         //TODO: uzależnić te trzy od profesji
         humanData._minSurvivalDays = Random.Range(1, 5);
-        humanData._maxSurvivalDays = Random.Range(humanData._minSurvivalDays+1, 15);
+        humanData._maxSurvivalDays = Random.Range(humanData._minSurvivalDays + 1, 15);
         humanData._survivalProbability = Random.Range(0.0f, 1.0f);
 
         humanData._color = Color.red;
@@ -48,11 +45,10 @@ public class HumanQueue : ScriptableObject {
                 break;
         }
 
-        Human human = spawnedHuman.GetComponent<Human>();
         spawnedHuman.name = humanData._name;
 
-        human.Initialize(humanData);
-        humans.Enqueue(human);
+        spawnedHuman.Initialize(humanData);
+        humans.Enqueue(spawnedHuman);
         UpdateQueue(5f);
     }
 
@@ -93,16 +89,17 @@ public class HumanQueue : ScriptableObject {
     }
 }
 
-
 public static class WeightedRandom {
     public static int GetRandom(float[] chances) {
 
-      float random = Random.Range(0f, 1f);
-      for (int i = 0; i < chances.Length; i++) {
-          random -= chances[i];
-          if (random < 0f)
-              return i;
-      }
-      return chances.Length - 1;
+        float random = Random.Range(0f, 1f);
+        
+        for (int i = 0; i < chances.Length; i++) {
+            random -= chances[i];
+            if (random < 0f)
+                return i;
+        }
+        
+        return chances.Length - 1;
     }
 }

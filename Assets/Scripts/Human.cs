@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using TMPro;
 
 public class Human : MonoBehaviour
 {
@@ -7,7 +8,6 @@ public class Human : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Coroutine movementCoroutine;
     private Vector3 currentTarget;
-
 
     private void Awake() {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -20,20 +20,17 @@ public class Human : MonoBehaviour
         Debug.Log($"Spawned: {JsonUtility.ToJson(humanData, true)}");
     }
 
-
-    private IEnumerator MoveCoroutine(Vector3 targetPosition, float duration) {
+    private IEnumerator MoveCoroutine(Vector3 targetPosition) {
         Vector3 startPosition = transform.position;
-        float elapsedTime = 0f;
 
-        while (elapsedTime < duration) {
-            elapsedTime += Time.deltaTime;
-            float progress = Mathf.Clamp01(elapsedTime / duration);
+        float duration = Vector2.Distance(transform.position, targetPosition) / humanData.movement_speed;
 
-            transform.position = Vector3.Lerp(
-                startPosition,
-                targetPosition,
-                progress
-            );
+        while (duration > 0f) {
+            Debug.Log("Duration" + duration);
+
+            duration = Vector2.Distance(transform.position, targetPosition) / humanData.movement_speed;
+
+            transform.position = Vector2.MoveTowards(transform.position, targetPosition, humanData.movement_speed * Time.deltaTime);
 
             yield return null;
         }
@@ -56,7 +53,7 @@ public class Human : MonoBehaviour
         currentTarget = targetPosition;
 
         movementCoroutine = StartCoroutine(
-            MoveCoroutine(targetPosition, duration)
+            MoveCoroutine(targetPosition)
         );
     }
 }

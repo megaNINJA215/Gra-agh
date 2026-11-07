@@ -9,6 +9,10 @@ public class HumanData : ScriptableObject {
     public int _maxSurvivalDays;
     public float _survivalProbability; // 0.0f - 1.0f
     public Color _color;
+
+    [Space]
+
+    public float movement_speed = 5f;
 }
 
 public enum Profession {
