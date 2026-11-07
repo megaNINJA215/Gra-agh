@@ -2767,6 +2767,7 @@ GameObject:
   - component: {fileID: 1633865702}
   - component: {fileID: 1633865705}
   - component: {fileID: 1633865704}
+  - component: {fileID: 1633865706}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2813,8 +2814,40 @@ MonoBehaviour:
     m_ActionName: 'GamePlayMap/RightMouseClick[/Mouse/rightButton]'
   - m_PersistentCalls:
       m_Calls: []
-    m_ActionId: 1b402c9e-ec36-499d-8c53-eae80ab99ebd
-    m_ActionName: UIMap/New action
+    m_ActionId: cfb967fc-11b9-4b79-9a61-875491a0b21b
+    m_ActionName: 'GamePlayMap/MousePosition[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6ae80779-bd26-47e1-97cd-85bbbbf33c74
+    m_ActionName: 'UI/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2bec071f-e613-40c4-9780-594d752de5de
+    m_ActionName: 'UI/Submit[/Keyboard/enter]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e4de50fd-eaa7-4393-b98f-6722176e8c51
+    m_ActionName: 'UI/Cancel[/Keyboard/escape]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a4ed78ae-d9ad-4c63-8b1c-222c5cbac34a
+    m_ActionName: 'UI/Point[/Mouse/position,/Pen/position,/Touchscreen/touch0/position,/Touchscreen/touch1/position,/Touchscreen/touch2/position,/Touchscreen/touch3/position,/Touchscreen/touch4/position,/Touchscreen/touch5/position,/Touchscreen/touch6/position,/Touchscreen/touch7/position,/Touchscreen/touch8/position,/Touchscreen/touch9/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b40e8258-e9bd-491b-a195-c55b771927e9
+    m_ActionName: 'UI/Click[/Mouse/leftButton,/Pen/tip,/Touchscreen/touch0/press,/Touchscreen/touch1/press,/Touchscreen/touch2/press,/Touchscreen/touch3/press,/Touchscreen/touch4/press,/Touchscreen/touch5/press,/Touchscreen/touch6/press,/Touchscreen/touch7/press,/Touchscreen/touch8/press,/Touchscreen/touch9/press]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e4377d83-e2d7-409c-b3ab-db5f4a8cf0f3
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2e5f3d10-c944-4e0f-80ae-c2a1a0de13e6
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 758b1852-fb84-4958-9349-e63e72674645
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlayMap
@@ -2864,6 +2897,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e372cda0567d404f9450f1c79b0efe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserInput
+--- !u!114 &1633865706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633865701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b469e1e829e6fb4399cf8ea1be40126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManagement
+  <time>k__BackingField: 0
+  <availableHours>k__BackingField: 8
+  <startHour>k__BackingField: 12
+  <startMinute>k__BackingField: 0
+  <timeScale>k__BackingField: 0.1
 --- !u!1 &1720590881
 GameObject:
   m_ObjectHideFlags: 0

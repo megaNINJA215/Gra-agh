@@ -29,11 +29,10 @@ public class TimeManagement : MonoBehaviour
     Coroutine time_counting_coroutine;
 
     private void Awake() {
-        if(Instance == null)
+        if(Instance != this)
             Instance = this;
     }
 
-    // nie wiedziałem gdzie to dać, we to gdzieś przenieś gdzie to będzie miało sens
     public void StartTimeCounter() {
         current_day += 1;
         time = 0;
