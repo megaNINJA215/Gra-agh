@@ -54,6 +54,7 @@ public class TimeManagement : MonoBehaviour
             }
 
             on_time_progressed?.Invoke();
+            Debug.Log("time test");
 
             yield return new WaitForSeconds(timeJump * timeScale);
 
@@ -81,6 +82,8 @@ public class TimeManagement : MonoBehaviour
         /// </summary>
         public int random_action_max = 4;
 
+        public UnityEvent randomizedEvent;
+
         [HideInInspector] public int chosen_randomized_duration;
 
         public int PickRandomizedTime(){
@@ -92,9 +95,9 @@ public class TimeManagement : MonoBehaviour
             this.random_action_min = Mathf.Clamp(random_action_min, 0, 6);
             this.random_action_max = Mathf.Clamp(random_action_max, 0, 6);
             chosen_randomized_duration = Random.Range(random_action_min, random_action_max) * timeJump;
+            randomizedEvent = new UnityEvent();
         }
 
-        public UnityEvent randomizedEvent;
     }
 }
 
