@@ -5,9 +5,9 @@ using System.Collections.Generic;
 public class HumanQueue : ScriptableObject {
     [SerializeField] private Human human_prefab;
     private Queue<Human> humans = new Queue<Human>();
+    public IEnumerable<Human> Humans => humans;
 
-    public void SpawnRandomHuman(Vector2 position)
-    {
+    public void SpawnRandomHuman(Vector2 position) {
         Human spawnedHuman = Instantiate(
             human_prefab,
             position,
@@ -49,42 +49,17 @@ public class HumanQueue : ScriptableObject {
 
         spawnedHuman.Initialize(humanData);
         humans.Enqueue(spawnedHuman);
-        UpdateQueue(5f);
-    }
-
-    private void UpdateQueue(float duration) {
-        int index = 0;
-
-        foreach (Human human in humans) {
-            Vector3 targetPosition = new Vector3(
-                5f - index,
-                -1f,
-                0f
-            );
-
-            human.MoveTo(targetPosition, duration);
-
-            index++;
-        }
     }
 
     public bool RemoveFirstHuman() {
-        while (humans.Count > 0)
-        {
+        while (humans.Count > 0) {
             Human firstHuman = humans.Dequeue();
-
             if (firstHuman == null)
                 continue;
 
             Destroy(firstHuman.gameObject);
-
-            //!! jeśli usuniesz kogoś z kolejki gdy ktoś dopiero do niej zmierza, 
-            //!! to jego czas na dojście na pozycje zostaje zmieniony i znacząco przyśpiesza
-            //!! ale póki co tak to zostawiam bo docelowo osoby z kolejki będzie się usuwać w innej scenie, gdzie nie bedzie to widoczne
-            UpdateQueue(0.5f);
             return true;
         }
-
         return false;
     }
 }

@@ -21,8 +21,6 @@ public class Human : MonoBehaviour
     }
 
     private IEnumerator MoveCoroutine(Vector3 targetPosition) {
-        Vector3 startPosition = transform.position;
-
         float duration = Vector2.Distance(transform.position, targetPosition) / humanData.movement_speed;
 
         while (duration > 0f) {
@@ -39,7 +37,7 @@ public class Human : MonoBehaviour
         movementCoroutine = null;
     }
 
-    public void MoveTo(Vector3 targetPosition, float duration)
+    public void MoveTo(Vector3 targetPosition)
     {
         if (movementCoroutine != null && currentTarget == targetPosition) {
             return;

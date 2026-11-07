@@ -37,10 +37,10 @@ public class UserInput : MonoBehaviour
 
         Rebind();
 
-        if (_player_input.currentControlScheme == null)
-            _player_input.SwitchCurrentControlScheme(_player_input.defaultControlScheme);
+        // if (_player_input.currentControlScheme == null)
+        //     _player_input.SwitchCurrentControlScheme(_player_input.defaultControlScheme);
 
-        current_control_sheme = _player_input.currentControlScheme;
+        // current_control_sheme = _player_input.currentControlScheme;
 
         InputSystem.onDeviceChange += OnDeviceChange;
     }
@@ -75,7 +75,7 @@ public class UserInput : MonoBehaviour
         }
     }
 
-    private void Update() {
+    // private void Update() {
         //foreach (var device in InputSystem.devices){
         //    Debug.Log("---------------------------------------------------------------------");
         //    Debug.Log(device.device);
@@ -87,11 +87,11 @@ public class UserInput : MonoBehaviour
         //else if (UsesGamepad())
         //    _player_input.uiInputModule.deselectOnBackgroundClick = false;
 
-        if (!current_control_sheme.Equals(_player_input.currentControlScheme)) {
-            current_control_sheme = _player_input.currentControlScheme;
-            on_controls_changed?.Invoke();
-        }
-    }
+        // if (!current_control_sheme.Equals(_player_input.currentControlScheme)) {
+        //     current_control_sheme = _player_input.currentControlScheme;
+        //     on_controls_changed?.Invoke();
+        // }
+    // }
 
     public void ChangeCurrentActionMap(string action_map){
         _player_input.SwitchCurrentActionMap(action_map);

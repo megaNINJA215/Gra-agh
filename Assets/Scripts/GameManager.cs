@@ -9,8 +9,7 @@ public class GameManager : MonoBehaviour
 
 
     [Header("Human Queue")]
-    [SerializeField] private HumanQueue humanQueue;
-    [SerializeField] private Transform humanSpawnPosition;
+    [SerializeField] private HumanQueueView humanQueueView;
 
 
     [Header("Player Stats")]
@@ -67,7 +66,7 @@ public class GameManager : MonoBehaviour
     private IEnumerator CountTime() {
         while (time < 60 * avaibleHours) {
             if (time % 30 == 0) {
-                humanQueue.SpawnRandomHuman(humanSpawnPosition.position); //TODO: umieścić to w sensownym miejscu, teraz dałem tutaj dla testu, respi się co 30 minut in game, można to również zrandomizować
+                humanQueueView.SpawnRandomHuman(); //TODO: umieścić to w sensownym miejscu, teraz dałem tutaj dla testu, respi się co 30 minut in game, można to również zrandomizować
             }
 
             godzina.SetText(TimeFormatter.Format(dayNumber, startHour, startMinute, time));
@@ -91,7 +90,7 @@ public class GameManager : MonoBehaviour
 public static class TimeFormatter {
     public static string Format(int dayNumber, int startHour, int startMinute, int timeCounter) {
         int currentTime = startHour * 60 + startMinute + timeCounter;
-        int hour = (currentTime / 60) % 24;
+        int hour = currentTime / 60 % 24;
         int minute = currentTime % 60; 
 
         return string.Format("Dzień: {0}\nGodzina: {1}:{2}", dayNumber, hour < 10 ? "0" + hour : hour, minute < 10 ? "0" + minute : minute);
