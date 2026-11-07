@@ -7,12 +7,16 @@ public class StartNextDay : MonoBehaviour
     private Gate gate;
 
     void Start() {
-        gate = gateObject.GetComponent<Gate>();
+        if (gateObject != null) {
+            gate = gateObject.GetComponent<Gate>();
+        }
     }
 
     public void StartNextDayFn() {
         endOfDayUI.SetActive(false);
-        gate.StartDay();
+        if (gateObject != null) {
+            gate.StartDay();
+        }
         TimeManagement.Instance.StartTimeCounter();
     }
 }

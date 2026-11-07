@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     // public static bool isDayRunning;
-    [SerializeField] public GameData gameData;
 
     [Header("Human Queue")]
     [SerializeField] private HumanQueueView humanQueueView;
@@ -19,15 +18,15 @@ public class GameManager : MonoBehaviour
     void Awake(){
         if(Instance == null){
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
     }
 
     void Start() {
         TimeManagement.Instance.StartTimeCounter();
 
-        hajs.SetText("Hajs: " + gameData.money);
-        gameData.isDayRunning = true;
+        hajs.SetText("Hajs: " + GameData.money);
+        GameData.isDayRunning = true;
     }
 
     void ShowEndDayScreen() {
@@ -45,20 +44,22 @@ public class GameManager : MonoBehaviour
     }
 
     public void Buy(int value) {
-        gameData.money -= value;
-        hajs.SetText("Hajs: " + gameData.money);
+        GameData.money -= value;
+        hajs.SetText("Hajs: " + GameData.money);
     }
 
     public void AddMoney(int value) {
-        gameData.money += value;
-        hajs.SetText("Hajs: " + gameData.money);
+        GameData.money += value;
+        hajs.SetText("Hajs: " + GameData.money);
     }
 
     private void UpdateHourCounter() {
-        int start_hour = TimeManagement.Instance.startHour;
-        int start_minute = TimeManagement.Instance.startMinute;
-        int time = TimeManagement.Instance.time;
+        int start_hour = GameData.startHour;
+        int start_minute = GameData.startMinute;
+        int time = GameData.time;
 
-        godzina.SetText(TimeFormatter.Format(TimeManagement.current_day, start_hour, start_minute, time));
+        if (godzina != null) {
+            godzina.SetText(TimeFormatter.Format(GameData.currentDay, start_hour, start_minute, time));
+        }
     }
 }
