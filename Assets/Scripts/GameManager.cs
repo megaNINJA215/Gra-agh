@@ -31,12 +31,18 @@ public class GameManager : MonoBehaviour
         isDayRunning = true;
     }
 
+    void ShowEndDayScreen() {
+        endOfDayUI.SetActive(true);
+    }
+
     private void OnEnable() {
         TimeManagement.on_time_progressed += UpdateHourCounter;
+        TimeManagement.on_day_ended += ShowEndDayScreen;
     }
 
     private void OnDisable() {
         TimeManagement.on_time_progressed -= UpdateHourCounter;
+        TimeManagement.on_day_ended -= ShowEndDayScreen;
     }
 
     public void Buy(int value) {

@@ -59,6 +59,7 @@ public class TimeManagement : MonoBehaviour
 
             time += timeJump;
         }
+        on_time_progressed?.Invoke();
 
         Time.timeScale = 0f;
         GameManager.isDayRunning = false;

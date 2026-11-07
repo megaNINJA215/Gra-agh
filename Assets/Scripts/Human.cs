@@ -17,7 +17,7 @@ public class Human : MonoBehaviour
         humanData = data;
         spriteRenderer.color = data._color; //TODO: zastąpić faktycznymi teksturami
 
-        Debug.Log($"Spawned: {JsonUtility.ToJson(humanData, true)}");
+        // Debug.Log($"Spawned: {JsonUtility.ToJson(humanData, true)}");
     }
 
     private IEnumerator MoveCoroutine(Vector3 targetPosition) {

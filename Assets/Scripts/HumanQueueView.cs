@@ -7,7 +7,7 @@ public class HumanQueueView : MonoBehaviour {
     [Header("Positions")]
     [SerializeField] private Transform spawnPosition;
     [SerializeField] private Transform firstHumanPosition;
-    [SerializeField] private float spacing;
+    [SerializeField] private Transform spacing;
 
     private void Start() {
         TimeManagement.RandomizedAction new_action = new(1, 4);
@@ -17,10 +17,11 @@ public class HumanQueueView : MonoBehaviour {
     }
 
     public void SpawnRandomHuman() {
-        if (humanQueue.humans.Count >= 8) {
-            Debug.Log("Osiągniętą maksymalną długość kolejki");
+        if (humanQueue.humans.Count >= 3) {
+            // Debug.Log("Osiągniętą maksymalną długość kolejki");
             return;
         }
+        Debug.Log("resp");
 
         humanQueue.SpawnRandomHuman(spawnPosition.position);
         UpdateQueue();
@@ -36,7 +37,7 @@ public class HumanQueueView : MonoBehaviour {
         int index = 0;
 
         foreach (Human human in humanQueue.Humans) {
-            Vector3 targetPosition = firstHumanPosition.position + new Vector3(index * spacing, -index * spacing * 0.8f, 0f);
+            Vector3 targetPosition = firstHumanPosition.position + spacing.position * index;
 
             human.MoveTo(targetPosition);
 

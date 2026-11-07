@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4321370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4321371}
+  m_Layer: 0
+  m_Name: Human Queue Spacing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4321371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4321370}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: -0.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 76251809}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8737075
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +259,7 @@ Transform:
   - {fileID: 706111810}
   - {fileID: 145398972}
   - {fileID: 982651747}
+  - {fileID: 4321371}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &145398971
@@ -291,7 +323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeManagement
   <time>k__BackingField: 0
-  <availableHours>k__BackingField: 8
+  <availableHours>k__BackingField: 2
   <startHour>k__BackingField: 12
   <startMinute>k__BackingField: 0
   <timeScale>k__BackingField: 1
@@ -1718,7 +1750,7 @@ MonoBehaviour:
   humanQueue: {fileID: 11400000, guid: 8c541f1b493698844af50a57f861e952, type: 2}
   spawnPosition: {fileID: 706111810}
   firstHumanPosition: {fileID: 145398972}
-  spacing: 0.8
+  spacing: {fileID: 4321371}
 --- !u!1 &1024519274
 GameObject:
   m_ObjectHideFlags: 0
