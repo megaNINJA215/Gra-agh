@@ -9,6 +9,12 @@ public class HumanQueueView : MonoBehaviour {
     [SerializeField] private Transform firstHumanPosition;
     [SerializeField] private float spacing;
 
+    private void Start(){
+        TimeManagement.RandomizedAction new_action = new(1, 4);
+        new_action.randomizedEvent.AddListener(SpawnRandomHuman);
+        new_action.randomizedEvent.AddListener(() => new_action.PickRandomizedTime());
+    }
+
     public void SpawnRandomHuman() {
         humanQueue.SpawnRandomHuman(spawnPosition.position);
         UpdateQueue();

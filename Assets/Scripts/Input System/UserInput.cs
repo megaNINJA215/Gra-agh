@@ -48,7 +48,6 @@ public class UserInput : MonoBehaviour
     private void OnDeviceChange(InputDevice device, InputDeviceChange change) {}
 
     private void Rebind() {
-
         Movement = _player_input.actions["Movement"];
         MouseClick = _player_input.actions["MouseClick"];
         RightMouseClick = _player_input.actions["RightMouseClick"];

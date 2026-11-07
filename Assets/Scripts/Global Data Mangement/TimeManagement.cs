@@ -84,6 +84,11 @@ public class TimeManagement : MonoBehaviour
 
         [HideInInspector] public int chosen_randomized_duration;
 
+        public int PickRandomizedTime(){
+            chosen_randomized_duration = Random.Range(random_action_min, random_action_max) * timeJump;
+            return chosen_randomized_duration;
+        }
+
         public RandomizedAction(int random_action_min, int random_action_max) {
             this.random_action_min = Mathf.Clamp(random_action_min, 0, 6);
             this.random_action_max = Mathf.Clamp(random_action_max, 0, 6);
