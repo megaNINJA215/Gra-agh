@@ -9,13 +9,15 @@ public class HumanQueueView : MonoBehaviour {
     [SerializeField] private Transform firstHumanPosition;
     [SerializeField] private float spacing;
 
-    private void Start(){
+    private void Start() {
         TimeManagement.RandomizedAction new_action = new(1, 4);
-        new_action.randomizedEvent.AddListener(SpawnRandomHuman);
+        new_action.randomizedEvent.AddListener(() => SpawnRandomHuman());
         new_action.randomizedEvent.AddListener(() => new_action.PickRandomizedTime());
+        TimeManagement.Instance.randomized_actions.Add(new_action);
     }
 
     public void SpawnRandomHuman() {
+        Debug.Log("Próba zrespienia");
         humanQueue.SpawnRandomHuman(spawnPosition.position);
         UpdateQueue();
     }
@@ -30,7 +32,7 @@ public class HumanQueueView : MonoBehaviour {
         int index = 0;
 
         foreach (Human human in humanQueue.Humans) {
-            Vector3 targetPosition = firstHumanPosition.position + new Vector3(-index * spacing, 0f, 0f);
+            Vector3 targetPosition = firstHumanPosition.position + new Vector3(index * spacing, -index * spacing * 0.8f, 0f);
 
             human.MoveTo(targetPosition);
 
