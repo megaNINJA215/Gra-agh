@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "HumanQueue", menuName = "GameData/Human Queue")]
 public class HumanQueue : ScriptableObject {
+
     [SerializeField] private Human human_prefab;
-    private Queue<Human> humans = new Queue<Human>();
+    public Queue<Human> humans = new Queue<Human>();
     public IEnumerable<Human> Humans => humans;
 
     public void SpawnRandomHuman(Vector2 position) {
