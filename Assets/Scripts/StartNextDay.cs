@@ -10,10 +10,9 @@ public class StartNextDay : MonoBehaviour
         gate = gateObject.GetComponent<Gate>();
     }
 
-
     public void StartNextDayFn() {
         if (GameManager.Instance.countTimeCoroutine != null) {
-            StopCoroutine(GameManager.Instance.countTimeCoroutine);
+            GameManager.Instance.StopCoroutine(GameManager.Instance.countTimeCoroutine);
             GameManager.Instance.countTimeCoroutine = null;
         }
         endOfDayUI.SetActive(false);

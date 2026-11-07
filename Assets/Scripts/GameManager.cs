@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float timeScale = 1f; // 1s irl -> timeScale min in game  
     [SerializeField] private int timeJump = 10; // co ile pokazuje zmiane godziny
     [SerializeField] private int dayNumber = 0;
-    public Coroutine countTimeCoroutine;
+    [System.NonSerialized] public Coroutine countTimeCoroutine;
 
 
     [Header("Game Components")]
