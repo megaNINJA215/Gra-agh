@@ -15,8 +15,9 @@ public class EntryStand : MonoBehaviour
     }
 
     public void EnterEntryStand() {
-        if (!humanQueue.RemoveFirstHuman()) {
-            Debug.Log("Nikogo nie ma w kolejce");
-        }
+        // if (!humanQueue.RemoveFirstHuman()) {
+        //     Debug.Log("Nikogo nie ma w kolejce");
+        // }
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EntryStand");
     }
 }
