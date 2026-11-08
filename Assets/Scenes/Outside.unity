@@ -1562,6 +1562,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8249342720122773858, guid: cd8250c2c893ba7ed9d15915099432c6, type: 3}
   m_PrefabInstance: {fileID: 1475212233993044953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &933960733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 933960735}
+  - component: {fileID: 933960734}
+  m_Layer: 0
+  m_Name: TimeManagement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &933960734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933960733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b469e1e829e6fb4399cf8ea1be40126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimeManagement
+  <timeScale>k__BackingField: 0.1
+--- !u!4 &933960735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933960733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.0895, y: -0.13767, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952009847
 GameObject:
   m_ObjectHideFlags: 0
@@ -3030,7 +3075,6 @@ GameObject:
   - component: {fileID: 1633865702}
   - component: {fileID: 1633865705}
   - component: {fileID: 1633865704}
-  - component: {fileID: 1633865706}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3144,7 +3188,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   humanQueueView: {fileID: 982651748}
-  Money: 5000
   hajs: {fileID: 1555099935}
   godzina: {fileID: 1622742126}
   endOfDayUI: {fileID: 1052569599}
@@ -3160,23 +3203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e372cda0567d404f9450f1c79b0efe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserInput
---- !u!114 &1633865706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1633865701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b469e1e829e6fb4399cf8ea1be40126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TimeManagement
-  <time>k__BackingField: 0
-  <availableHours>k__BackingField: 8
-  <startHour>k__BackingField: 12
-  <startMinute>k__BackingField: 0
-  <timeScale>k__BackingField: 0.1
 --- !u!1 &1720590881
 GameObject:
   m_ObjectHideFlags: 0
@@ -3828,3 +3854,4 @@ SceneRoots:
   - {fileID: 1633865703}
   - {fileID: 892195991}
   - {fileID: 492510417}
+  - {fileID: 933960735}

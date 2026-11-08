@@ -29,13 +29,21 @@ public class TimeManagement : MonoBehaviour
     Coroutine time_counting_coroutine;
 
     private void Awake() {
-        if(Instance != this)
+        if (Instance == null) {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
+        } else if (Instance != this) {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start() {
+        StartTimeCounter();
     }
 
     public void StartTimeCounter() {
-        GameData.currentDay += 1;
-        GameData.time = 0;
+        // GameData.currentDay += 1;
+        // GameData.time = 0;
         Time.timeScale = 1f;
 
         if (time_counting_coroutine != null)
@@ -72,7 +80,6 @@ public class TimeManagement : MonoBehaviour
         GameData.currentDay = day;
     }
 
-    //TODO: jak będę miał chwilę 
     [System.Serializable]
     public class RandomizedAction {
         /// <summary>

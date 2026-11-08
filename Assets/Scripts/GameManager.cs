@@ -23,9 +23,8 @@ public class GameManager : MonoBehaviour
     }
 
     void Start() {
-        TimeManagement.Instance.StartTimeCounter();
-
         hajs.SetText("Hajs: " + GameData.money);
+        UpdateHourCounter();
         GameData.isDayRunning = true;
     }
 

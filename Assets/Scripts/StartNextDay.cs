@@ -17,6 +17,8 @@ public class StartNextDay : MonoBehaviour
         if (gateObject != null) {
             gate.StartDay();
         }
+        GameData.currentDay += 1;
+        GameData.time = 0;
         TimeManagement.Instance.StartTimeCounter();
     }
 }
