@@ -26,9 +26,9 @@ public class HumanQueue : ScriptableObject {
     public Queue<DataAndObject> humans = new();
     public IEnumerable<DataAndObject> Humans => humans;
 
-    public void SpawnRandomHuman(Vector2 position) {
+    public void SpawnRandomHuman(Vector2 position, bool isBig) {
         Human spawnedHuman = Instantiate(
-            human_prefab,
+            isBig ? human_prefab_big : human_prefab,
             position,
             Quaternion.identity
         );

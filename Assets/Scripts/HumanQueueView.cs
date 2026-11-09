@@ -32,7 +32,7 @@ public class HumanQueueView : MonoBehaviour {
         }
         Debug.Log("resp");
 
-        humanQueue.SpawnRandomHuman(spawnPosition.position);
+        humanQueue.SpawnRandomHuman(spawnPosition.position, isBig);
         UpdateQueue();
     }
 
