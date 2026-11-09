@@ -23,7 +23,7 @@ public class HumanQueue : ScriptableObject {
 
     [SerializeField] private Human human_prefab;
     [SerializeField] private Human human_prefab_big;
-    public Queue<DataAndObject> humans = new();
+    [System.NonSerialized] public Queue<DataAndObject> humans = new();
     public IEnumerable<DataAndObject> Humans => humans;
 
     public void SpawnRandomHuman(Vector2 position, bool isBig) {
