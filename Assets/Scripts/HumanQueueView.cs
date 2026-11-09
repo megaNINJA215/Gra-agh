@@ -21,7 +21,7 @@ public class HumanQueueView : MonoBehaviour {
         humanQueue.StartNewScene(firstHumanPosition, spacing, isBig);
     }
 
-    private void OnOestroy() {
+    private void OnDestroy() {
         TimeManagement.Instance.randomized_actions.Remove(new_action);
     }
 
