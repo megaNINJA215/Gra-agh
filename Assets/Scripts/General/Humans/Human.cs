@@ -1,6 +1,5 @@
 using UnityEngine;
 using System.Collections;
-using TMPro;
 
 public class Human : MonoBehaviour
 {
@@ -15,9 +14,7 @@ public class Human : MonoBehaviour
 
     public void Initialize(HumanData data) {
         humanData = data;
-        spriteRenderer.sprite = data._sprite; //TODO: zastąpić faktycznymi teksturami
-
-        // Debug.Log($"Spawned: {JsonUtility.ToJson(humanData, true)}");
+        spriteRenderer.sprite = data._sprite;
     }
 
     private IEnumerator MoveCoroutine(Vector3 targetPosition) {

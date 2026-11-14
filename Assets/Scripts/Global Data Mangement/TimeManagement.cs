@@ -10,20 +10,14 @@ public class TimeManagement : MonoBehaviour
     public static TimeManagement Instance { get; private set; }
 
     [Header("Game Time")]
-
-    // [field: SerializeField] public int time { get; private set; } = 0;
-    // [field: SerializeField] public int availableHours { get; private set; } = 8;
-    // [field: SerializeField] public int startHour { get; private set; } = 12;
-    // [field: SerializeField] public int startMinute { get; private set; } = 0;
     [field: SerializeField] public float timeScale { get; private set; } = 1f; // 1s irl -> timeScale min in game  
 
-    private const int timeJump = 10; // co ile pokazuje zmiane godziny
-
-    // public static int current_day { get; private set; }
+    private const int timeJump = 10;
 
     public readonly List<RandomizedAction> randomized_actions = new();
 
     public static Action on_time_progressed;
+    public static Action on_day_started;
     public static Action on_day_ended;
 
     Coroutine time_counting_coroutine;
@@ -37,38 +31,37 @@ public class TimeManagement : MonoBehaviour
         }
     }
 
+
     private void Start() {
         StartTimeCounter();
     }
 
     public void StartTimeCounter() {
-        // GameData.currentDay += 1;
-        // GameData.time = 0;
         Time.timeScale = 1f;
 
         if (time_counting_coroutine != null)
             StopCoroutine(time_counting_coroutine);
+            
+        GameData.currentDay += 1;
+        GameData.time = 0;
 
         time_counting_coroutine = StartCoroutine(TimePassage());
         GameData.isDayRunning = true;
     }
 
     public IEnumerator TimePassage() {
+        on_day_started?.Invoke();
+
         while (GameData.time < 60 * GameData.availableHours) {
-            Debug.Log("time");
             foreach (RandomizedAction action in randomized_actions) {
                 if (GameData.time % action.chosen_randomized_duration == 0) {
                     action.randomizedEvent?.Invoke();
                 }
             }
-
-            on_time_progressed?.Invoke();
-
             yield return new WaitForSeconds(timeJump * timeScale);
-
             GameData.time += timeJump;
+            on_time_progressed?.Invoke();
         }
-        on_time_progressed?.Invoke();
 
         Time.timeScale = 0f;
         GameData.isDayRunning = false;
@@ -80,7 +73,7 @@ public class TimeManagement : MonoBehaviour
         GameData.currentDay = day;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class RandomizedAction {
         /// <summary>
         /// Has to be between 0 and 6

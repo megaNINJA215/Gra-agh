@@ -7,9 +7,8 @@ public class TentData : ScriptableObject {
   public int _level;
   public Sprite _sprite;
   public TentData _nextLevel;
-
   
-  public bool CanPurchase(int money_to_check){
+  public bool CanPurchase(int money_to_check) {
     return money_to_check >= _upgrade_price;
   }
 }

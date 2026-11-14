@@ -1,7 +1,6 @@
 using UnityEngine;
 
-public class Tent : MonoBehaviour //, Interactable
-{
+public class Tent : MonoBehaviour {
     public TentData tentData;
 
     void Start() {
@@ -32,8 +31,3 @@ public class Tent : MonoBehaviour //, Interactable
         Debug.Log("Zakupiony poziom: "+ tentData._level);
     }
 }
-
-// public interface Interactable{
-//     void Interact();
-//     bool CanInteract();
-// }

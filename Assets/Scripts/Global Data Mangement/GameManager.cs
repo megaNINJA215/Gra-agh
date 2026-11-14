@@ -1,11 +1,9 @@
 using UnityEngine;
 using TMPro;
-using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    // public static bool isDayRunning;
 
     [Header("Human Queue")]
     [SerializeField] private HumanQueueView humanQueueView;
@@ -18,7 +16,6 @@ public class GameManager : MonoBehaviour
     void Awake(){
         if(Instance == null){
             Instance = this;
-            // DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -31,14 +28,21 @@ public class GameManager : MonoBehaviour
     void ShowEndDayScreen() {
         endOfDayUI.SetActive(true);
     }
+    void HideEndDayScreen() {
+        endOfDayUI.SetActive(false);
+    }
 
     private void OnEnable() {
         TimeManagement.on_time_progressed += UpdateHourCounter;
+        TimeManagement.on_day_started += UpdateHourCounter;
+        TimeManagement.on_day_started += HideEndDayScreen;
         TimeManagement.on_day_ended += ShowEndDayScreen;
     }
 
     private void OnDisable() {
         TimeManagement.on_time_progressed -= UpdateHourCounter;
+        TimeManagement.on_day_started -= UpdateHourCounter;
+        TimeManagement.on_day_started -= HideEndDayScreen;
         TimeManagement.on_day_ended -= ShowEndDayScreen;
     }
 

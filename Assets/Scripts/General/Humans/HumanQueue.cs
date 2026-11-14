@@ -9,14 +9,12 @@ public class HumanQueue : ScriptableObject {
   public Sprite peasant;
   public Sprite trader;
 
-    public class DataAndObject
-    {
+    public class DataAndObject {
         public HumanData _data;
-        public Human _gameobject;
-        public DataAndObject(HumanData humanData, Human spawnedHuman)
-        {
-            this._data = humanData;
-            this._gameobject = spawnedHuman;
+        public Human _gameObject;
+        public DataAndObject(HumanData humanData, Human spawnedHuman) {
+            _data = humanData;
+            _gameObject = spawnedHuman;
         }
     }
 
@@ -75,7 +73,7 @@ public class HumanQueue : ScriptableObject {
             if (firstHuman == null)
                 continue;
 
-            Destroy(firstHuman._gameobject.gameObject);
+            Destroy(firstHuman._gameObject.gameObject);
             return true;
         }
         return false;
@@ -97,7 +95,7 @@ public class HumanQueue : ScriptableObject {
     public void StartNewScene(Transform firstHumanPosition, Transform spacing, bool isBig) {
         int index = 0;
         foreach (DataAndObject human in humans) {
-            human._gameobject = GenerateObjectFromData(human._data, firstHumanPosition, spacing, isBig, index);
+            human._gameObject = GenerateObjectFromData(human._data, firstHumanPosition, spacing, isBig, index);
             index++;
         }
     }

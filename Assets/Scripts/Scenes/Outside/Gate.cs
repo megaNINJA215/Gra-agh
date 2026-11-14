@@ -1,9 +1,16 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class Gate : MonoBehaviour {
 
     private bool usedToday = false;
+    
+    private void OnEnable() {
+        TimeManagement.on_day_started += ResetGateUsage;
+    }
+
+    private void OnDisable() {
+        TimeManagement.on_day_started -= ResetGateUsage;
+    }
 
     public void EnterGate() {
         if (!GameData.isDayRunning)
@@ -21,7 +28,7 @@ public class Gate : MonoBehaviour {
         usedToday = true;
     }
 
-    public void StartDay() {
+    private void ResetGateUsage() {
         usedToday = false;
     }
 }

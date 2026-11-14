@@ -557,8 +557,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ddcb07b8c549f3d88619884f535f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartNextDay
-  endOfDayUI: {fileID: 1052569599}
-  gateObject: {fileID: 1288150107}
 --- !u!114 &353141178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,8 +1326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ddcb07b8c549f3d88619884f535f1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StartNextDay
-  endOfDayUI: {fileID: 1052569599}
-  gateObject: {fileID: 1288150107}
 --- !u!1 &706111809
 GameObject:
   m_ObjectHideFlags: 0

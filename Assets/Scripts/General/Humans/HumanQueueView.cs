@@ -48,7 +48,7 @@ public class HumanQueueView : MonoBehaviour {
         foreach (HumanQueue.DataAndObject human in humanQueue.Humans) {
             Vector3 targetPosition = firstHumanPosition.position + spacing.position * index;
 
-            human._gameobject.MoveTo(targetPosition);
+            human._gameObject.MoveTo(targetPosition);
 
             index++;
         }
